@@ -11,7 +11,7 @@ export default class SingleRoom extends Component {
     //the prop here is been somehow passed by react-router
     constructor(props){
         super(props);
-       // console.log(props);
+       
        this.state = {
            slug: this.props.match.params.slug,
            defaultBcg
@@ -50,9 +50,7 @@ export default class SingleRoom extends Component {
         const [mainImg, ...defaultImg] = images;
 
         return  (
-            // switching to styled-components for styling due to the 
-            //dynamically gotten data e.g images we wd be using for d pages n from contentful 
-            //using rect fragments (<>) coz to adjascent tins cant be setup next  to each other in d JSX
+            
              <>
             <StyledHero img={mainImg || this.state.defaultBcg }>
                 <Banner title={`${name} room`}>
